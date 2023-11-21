@@ -1,3 +1,6 @@
+import sys
+
+
 class Player:
     def __init__(self, name='Jeff', balance=1000):
         self._name = name
@@ -23,10 +26,12 @@ class Player:
         self._balance += amount
 
     def bet(self, amount):
+        self._balance -= amount
+
+    def check_balance(self):
         if self._balance == 0:
-            return True
-        else:
-            self._balance -= amount
+            print(f'You are out of chips')
+            sys.exit()
 
     def print(self):
         print(f'Name: {self._name}\nKontostand: {self._balance}')
