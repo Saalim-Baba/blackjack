@@ -88,6 +88,7 @@ def main():
             if action == 'E':
                 break
             action = input(' > ?').upper()
+        player.check_balance()
         restart = input('Checkout (Y/N)?').upper()
         if restart == 'N':
             break
