@@ -28,7 +28,9 @@ def pick_cards(cards):
 def menu(player_cards, dealer_cards, player):
     print('------------------')
     print(f'(N)ew card, (C)heck score, (E)xit')
-    print(f'Dealers cards: {dealer_cards}')
+    shown_dealer_cards = dealer_cards.copy()
+    shown_dealer_cards[0] = '*'
+    print(f'Dealers cards: {shown_dealer_cards}')
     print(f'Your cards: {player_cards}')
     player.print()
     print('------------------')
