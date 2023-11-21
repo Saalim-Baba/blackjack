@@ -26,7 +26,15 @@ class Player:
         self._balance += amount
 
     def bet(self, amount):
-        self._balance -= amount
+        try:
+            if 0 < amount <= self._balance:
+                self._balance -= amount
+                print(f'Bet successful! New balance: {self._balance}')
+            else:
+                print('Invalid bet amount or insufficient balance.')
+                print('This round wont have an effect on your balance.')
+        except ValueError:
+            print('Invalid input')
 
     def check_balance(self):
         if self._balance == 0:
