@@ -59,7 +59,7 @@ def main():
                     dealer_cards.append(pick_cards(cards))
                 menu(player_cards, dealer_cards, player)
                 bet = int(input('bet ?'))
-                if player.bet(bet): #needs some work
+                if player.bet(bet):
                     break
                 action = input(' > ?').upper()
             if action == 'N':
