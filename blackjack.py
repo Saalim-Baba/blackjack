@@ -4,6 +4,15 @@ import random
 
 
 def get_score(cards):
+    """
+    Calculate the blackjack score of a hand of cards.
+
+    Parameters:
+    - cards (list of str): The list of card names in the player's hand.
+
+    Returns:
+    - int: The total score of the hand accounting for the special rules of Aces.
+    """
     score = 0
     ace_count = 0
     for i in cards:
@@ -21,11 +30,28 @@ def get_score(cards):
 
 
 def pick_cards(cards):
+    """
+    Select a random card from a list of cards.
+
+    Parameters:
+    - cards (list of str): The full deck from which to pick a card.
+
+    Returns:
+    - str: A randomly chosen card.
+    """
     random_card = cards[random.randint(0, 12)]
     return random_card
 
 
 def menu(player_cards, dealer_cards, player):
+    """
+    Display the game menu with the current game state.
+
+    Parameters:
+    - player_cards (list of str): List of the player's cards.
+    - dealer_cards (list of str): List of the dealer's cards.
+    - player (Player object): The player's instance with their current state.
+    """
     print('------------------')
     print(f'(N)ew card, (C)heck score, (E)xit')
     shown_dealer_cards = dealer_cards.copy()
@@ -37,6 +63,9 @@ def menu(player_cards, dealer_cards, player):
 
 
 def main():
+    """
+    The main game loop that handles user input and game progression.
+    """
     player = Player()
     while True:
         print(f'(S)tart, (E)xit')
