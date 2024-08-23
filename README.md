@@ -20,7 +20,7 @@ This project consists of a simplified version of the classic card game, Blackjac
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/blackjack.git
+git clone https://github.com/hustini/blackjack.git
 ```
 
 Navigate to the project directory:
